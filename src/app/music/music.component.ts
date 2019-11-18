@@ -1,45 +1,44 @@
 import { Component, OnInit } from '@angular/core';
-
 import { Observable } from 'rxjs/Observable';
 
-import { MusicService } from './movies.service';
+import { MusicService } from './music.service';
+
 
 @Component({
-  selector: 'app-movies',
-  templateUrl: './movies.component.html',
-  styleUrls: ['./movies.component.css'],
-  providers: [MoviesService]
+  selector: 'app-music',
+  templateUrl: './music.component.html',
+  styleUrls: ['./music.component.css'],
+  providers: [MusicService]
 })
-export class MoviesComponent implements OnInit {
-
+export class MusicComponent implements OnInit {
   message: string;
-  movie: any;
-  movieFound: boolean;
-  moviePoster: string;
+  music: any;
+  musicFound: boolean;
+  musicPoster: string;
+
 
   constructor(
-    private moviesService: MoviesService,
+    private musicService: MusicService,
   ) { }
 
   ngOnInit() {
   }
-
-  searchMovies(term: string): void {
-    this.moviesService.search(term).subscribe(res => {
+  searchMusic(term: string): void {
+    this.musicService.search(term).subscribe(res => {
       if (res.Response === 'True') {
-        this.movie = res
-        if (this.movie.Poster != 'N/A') {
-          this.moviePoster = this.movie.Poster
+        this.music = res
+        if (this.music.Poster != 'N/A') {
+          this.musicPoster = this.music.Poster
         } else {
-          this.moviePoster = ''
+          this.musicPoster = ''
         }
-        this.movieFound = true
+        this.musicFound = true
       } else {
-        this.movieFound = false
+        this.musicFound = false
         this.message = 'No movie was found that matched your search.'
       }
     });
-    console.log(term, this.movie)
+    console.log(term, this.music)
   }
 
 }
