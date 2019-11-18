@@ -1,27 +1,54 @@
-# Itunes
+# LyRICS- Angular
+![Logo](https://imgur.com/nEM3LCD.png)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.19.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Functional Heirarch
 
-## Code scaffolding
+```
+client
+|___ public
+      |___ favicon.ico
+      |___ index.html
+|___ src
+      |___ app
+            |___ app-routing.module.ts
+            |___ app-component.css
+            |___ app-component.html 
+            |___ app-component.spec.ts 
+            |___ app-component.ts
+            |___ app-modules.ts
+      |___Services
+      		  |___ api-helper.js         
+      |___ music
+            |___ music-routing.module.ts
+            |___ music-component.css
+            |___ apmusicp-component.html 
+            |___ music-component.spec.ts 
+            |___ music-component.ts
+           
+      |___ App.css
+      |___ App.js
+      |___ index.css
+      |___ index.js
+      |___ logo.svg
+      |___ readme.md
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+<br>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Supporting Libraries
 
-## Running unit tests
+> Packages installed via node go here.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+* Client-Side
+  * material-ui
+  * Angular
+  * AudioPlayer
+  * Angular-bootstrip
+  
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+<br>
+<br>
