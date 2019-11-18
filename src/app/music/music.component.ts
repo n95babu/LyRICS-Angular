@@ -35,7 +35,7 @@ export class MusicComponent implements OnInit {
         this.musicFound = true
       } else {
         this.musicFound = false
-        this.message = 'No movie was found that matched your search.'
+        this.message = 'No music was found that matched your search.'
       }
     });
     console.log(term, this.music)
